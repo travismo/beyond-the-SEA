@@ -3,6 +3,8 @@ Sage code to compute the trace of a separable endomorphism of a supersingular el
 
 We assume the input to our algorithm is an endomorphism of a supersingular elliptic curve E over a finite field Fp2 of p^2 elements whose j-invariant is not 0 or 1728. We exploit the fact that, given our assumptions on E, every ell isogeny of E is defined over Fp2 -- every prime is an "Elkies prime" for E! Thus, for sufficiently many odd primes ell, we compute the trace of the endomorphism modulo ell by restricting it to the kernel cut out by the kernel polynomial of some ell-isogeny. By working with projective coordinates, we avoid inversions in polynomial quotient rings. Finally, we use the fact that we can compute the trace of the endomorphism modulo p using the "scaling factor" of the endomorphism. 
 
+Requires Sage 10.5.
+
 Sample usage:
 ```
 load('cycles.sage')
