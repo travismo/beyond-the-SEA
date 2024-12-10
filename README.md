@@ -9,10 +9,15 @@ load('cycles.sage')
 load('isogenies.sage')
 load('superSEA.sage')
 p = next_prime(2**16)
+# find one supersingular j-invariant
 j = find_supersingular_j(p)
+# find a pseudorandom supersingular j-invariant as the final vertex in a random walk in the 2-isogeny graph
 j = random_walk(j,2)[-1]
+# compute a cycle in the 2-isogeny graph based at j
 C = CGL_cycle(j,2)
+# convert the cycle into an endomorphism of a curve with j-invariant j
 endo = path_to_isogeny(C, 2)
+# compute the trace of the endomorphism
 t = superSEA(endo)
 ```
 
