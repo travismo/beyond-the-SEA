@@ -23,6 +23,6 @@ endo = path_to_isogeny(C, 2)
 t = superSEA(endo)
 ```
 
-
+Authors: Travis Morrison, Lorenz Panny, Jana Sot\`akov\`a, Michael Wills. 
 
 
