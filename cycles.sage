@@ -93,7 +93,7 @@ def path_to_isogeny(path, ell):
     for j in path[1:]:
         Anext, Bnext = normalized_model(E,j,ell)
         Enext = EllipticCurve([Anext, Bnext])
-        phi = E.isogeny(None, Enext, ell) if ell == 2 else E.isogeny(compute_isogeny_bmss(E, Enext, ell), ell)
+        phi = E.isogeny(None, Enext, ell) if ell == 2 else E.isogeny(compute_isogeny_bmss(E, Enext, ell))
         chain.append(phi)
         E = chain[-1].codomain()
     try:
