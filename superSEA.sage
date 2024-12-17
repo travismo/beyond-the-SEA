@@ -158,7 +158,6 @@ def proj_trace_of_endo_mod(E, chain, deg, ell):
     B = E.a6()                     
     h = get_kernel_poly(E, ell)
     f = x^3 + A*x + B
-    chain = projective_chain(endo)
     endo_ell = proj_compose_and_reduce_chain(chain, h)
     endo_ell_2 = proj_compose_and_reduce_chain(chain, h, endo_ell)
     deg_ell = scale(deg % ell, (x, 1, 1), A, f, h)
